@@ -135,6 +135,10 @@ python adapt.py --label_select_strategy negatively_biased_feedback --use_rld --u
 Note: The `ulb_ratio` parameter follows the convention from [Semi-supervised Learning by Microsoft](https://github.com/microsoft/Semi-supervised-learning).
 
 
+## Acknowledgement
+
+This project's medical image processing pipeline is built upon [torchxrayvision](https://github.com/mlmed/torchxrayvision).
+
 
 ## Citation
 
@@ -148,3 +152,4 @@ If you find this work interesting and useful, please cite our paper:
   year={2024}
 }
 ```
+

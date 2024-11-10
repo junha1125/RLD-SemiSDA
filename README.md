@@ -3,7 +3,7 @@
 Official PyTorch implementation of "Is user feedback always informative? Retrieval Latent Defending for Semi-Supervised Domain Adaptation without Source Data" (ECCV 2024)
 
 <div align="center">
-  <img src="resources/NBF-RLD.jpeg" width="800"/>
+  <img src="resources/main_log.png" width="800"/>
   <div>&nbsp;</div>
 
 [![arXiv](https://img.shields.io/badge/arXiv-2407.15383-b31b1b)](https://arxiv.org/abs/2407.15383) [![project page](https://img.shields.io/badge/project-page-blue)](https://sites.google.com/view/junha/nbf-rld)
