@@ -41,10 +41,10 @@ The MIMIC-CXR-V2 dataset contains chest X-ray images and reports from Beth Israe
 The original images in MIMIC-CXR-V2 are high resolution, which can lead to longer training times. We recommend resizing the images to 224x224 pixels using our preprocessing script:
 
 ```bash
-python mimics_to_224.py --root_folder files/p18
+python mimics_to_224.py --root_folder files
 ```
 
-Where `--root_folder` should point to your MIMIC-JPG image directory (e.g., `files/p18`). This preprocessing step will significantly reduce training time while maintaining sufficient image quality for most deep learning applications.
+Where `--root_folder` should point to your MIMIC-JPG image directory (e.g., `files`). This preprocessing step will significantly reduce training time while maintaining sufficient image quality for most deep learning applications.
 
 ### Directory Structure
 
@@ -55,14 +55,15 @@ RLD-SemiSDA/chest-X-ray/data/mimic/
 ├── LICENSE.txt
 ├── README
 ├── SHA256SUMS.txt
-├── files_224/                          # Preprocessed 224x224 images
+├── files/
+├── files_224/                         # Preprocessed 224x224 images
 ├── mimic-cxr-2.0.0-chexpert.csv       # CheXpert labels
 ├── mimic-cxr-2.0.0-chexpert.csv.gz
 ├── mimic-cxr-2.0.0-metadata.csv       # Metadata information
 ├── mimic-cxr-2.0.0-metadata.csv.gz
-├── mimic-cxr-2.0.0-negbio.csv        # NegBio labels
+├── mimic-cxr-2.0.0-negbio.csv         # NegBio labels
 ├── mimic-cxr-2.0.0-negbio.csv.gz
-├── mimic-cxr-2.0.0-split.csv         # Train/val/test splits
+├── mimic-cxr-2.0.0-split.csv          # Train/val/test splits
 ├── mimic-cxr-2.0.0-split.csv.gz
 └── mimic-metas.zip
 ```
