@@ -1,0 +1,42 @@
+algorithm: fixmatch
+save_dir: ./saved_models/classic_cv
+# save_name: fixmatch_domainnet_sketch
+resume: True
+overwrite: True
+use_tensorboard: True
+use_wandb: False
+epoch: 50
+num_train_iter: 2000
+num_eval_iter: 40
+num_log_iter: 50
+# num_labels: 126
+batch_size: 4
+use_cat: True
+eval_batch_size: 256
+ulb_loss_ratio: 1.0
+uratio: 7
+ema_m: 0.999
+crop_ratio: 0.875
+img_size: 256
+optim: SGD
+lr: 1e-4
+momentum: 0.9
+weight_decay: 1e-4
+layer_decay: 1.0
+amp: False
+clip: 0.0
+net: resnet50
+net_from_torch: True
+data_dir: ./data
+dataset: officehome
+train_sampler: RandomSampler
+num_classes: 65
+num_workers: 1
+# seed: 0
+world_size: 1
+rank: 0
+multiprocessing_distributed: True
+dist_url: tcp://127.0.0.1:100050
+dist_backend: nccl
+gpu: 0
+# trg_eval_mode: 'finetune=valset'

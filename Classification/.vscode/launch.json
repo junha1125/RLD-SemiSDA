@@ -1,0 +1,70 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "train.py source",
+            "type": "python",
+            "request": "launch",
+            "program": "train.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--c",
+                // "config/usb_cv/fullysupervised/fullysupervised_visda_120_0.yaml",
+                // "config/classic_cv/fullysupervised/fullysupervised_visda_train_0.yaml",
+                "config/classic_cv/fullysupervised/fullysupervised_cifar10_40_0.yaml",
+                "--src", "train",
+            ],
+            "justMyCode": true,
+            "cwd": "/home/junha/junha/nbf/code/Customization_via_local_updates"
+        },
+        {
+            "name": "eval.py",
+            "type": "python",
+            "request": "launch",
+            "program": "eval.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--dataset", "visda",
+                "--trg", "validation",
+                "--load_path", "saved_models/classic_cv/fullysupervised_visda_120_2/model_best.pth",
+            ],
+            "justMyCode": true,
+            "cwd": "/home/junha/junha/nbf/code/Customization_via_local_updates"
+        },
+        {
+            "name": "train.py target",
+            "type": "python",
+            "request": "launch",
+            "program": "train.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--c","config/classic_cv/contratta/contratta_domainnet_vit_clipart.yaml",         
+                // "--c","config/classic_cv/contratta/contratta_domainnet_clipart.yaml",         
+                "--src_model_path","/lunit/data/users/junhas/src_model/real_vit_source_5e4.pth",  
+                // "--src_model_path","/lunit/data/users/junhas/src_model/real_source_5e4.pth",  
+                "--trg","clipart", 
+                "--save_name","contrattadebias",  
+                "--num_labels","378",
+                "--lr","1e-4",  
+                "--seed","0",
+                "--trg_eval_src","False",
+                "--negatively_biased_feedback","False",
+                "--save_feature","False",
+                "--linear_probing","False",
+            ],
+            "justMyCode": true,
+            "cwd": "/home/junha/junha/nbf/code/Customization_via_local_updates"
+        },
+    ]
+}

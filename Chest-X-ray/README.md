@@ -21,12 +21,10 @@ pip install -r requirements.txt
 
 If you encounter any issues with the installation, you may try using the requirements from [torchxrayvision](https://github.com/mlmed/torchxrayvision) repository as an alternative.
 
-We recommend using the same Docker environment as the authors:
+We recommend using the same Docker environment as the authors.
 ```bash
 docker pull pytorch/pytorch:1.12.1-cuda11.3-cudnn8-runtime
 ```
-
-This environment has been thoroughly tested and ensures reproducibility of the results.
 
 ## Dataset Preparation
 
@@ -153,4 +151,3 @@ If you find this work interesting and useful, please cite our paper:
   year={2024}
 }
 ```
-

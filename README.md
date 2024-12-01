@@ -20,10 +20,16 @@ The chest X-ray experiments implementation is available in the `Chest-X-ray` dir
 - Dataset preparation
 - Model training
 - Adaptation experiments
-- Reproduction of our results
 
 #### Image Classification
-Implementation for general image classification tasks will be updated soon. The code can be easily built upon [Microsoft's Semi-supervised Learning repository](https://github.com/microsoft/Semi-supervised-learning).
+The implementation for general image classification tasks is available in the `Classification` directory. Please refer to [Classification/README.md](Classification/README.md) for detailed instructions on:
+- Installation and environment setup
+- Dataset preparation (Office-Home and DomainNet)
+- Pre-training source models
+- Running adaptation experiments with:
+  - Random Feedback (RF)
+  - Negatively Biased Feedback (NBF)
+  - NBF with Retrieval Latent Defending (RLD)
 
 ## Citation
 
